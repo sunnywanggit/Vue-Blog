@@ -23,7 +23,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ---
 # first commit
 
-**Create a new pages file in the src directory
+**Create a new pages file in the src directory  
 Add the desired page to the pages**
    
 **Create Page routes**
