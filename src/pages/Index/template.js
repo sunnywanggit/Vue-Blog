@@ -1,9 +1,11 @@
 import request from '@/helpers/request.js'
 import auth from '@/api/auth.js'
+import blog from '@/api/blog.js'
 
 // 同样调用全局变量，当然也是主要为了测试用
 window.request = request
 window.auth = auth
+window.blog =blog
 
 export default {
   name: 'HelloWorld',
