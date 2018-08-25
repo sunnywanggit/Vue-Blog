@@ -37,3 +37,5 @@ Add the desired page to the pages**
 **helpers-request**
 
 **api-auth**
+
+**api-blog**
