@@ -20,16 +20,12 @@ export default {
     Header,
     Footer
   }
-};
+}
 </script>
 
 <style lang="less">
-// 让页面撑开
-html,
-body,
-#app {
-  height: 100%;
-}
+
+@import "./assets/common.less";
 
 #app {
   display: grid;
