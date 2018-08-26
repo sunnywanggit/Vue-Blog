@@ -20,11 +20,10 @@ export default {
     Header,
     Footer
   }
-}
+};
 </script>
 
 <style lang="less">
-
 @import "./assets/common.less";
 
 #app {
