@@ -39,3 +39,12 @@ Add the desired page to the pages**
 **api-auth**
 
 **api-blog**
+
+# Project structure
+**Component style**
+
+**Static pages: using grid layout**
+
+# Vuex
+**store-auth**
+
