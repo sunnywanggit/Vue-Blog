@@ -20,7 +20,7 @@ export default {
         })
         // 跳转路径
         .then(() => {
-          this.$router.push({ path: '/' })
+          this.$router.push({ path: this.$route.query.redirect || '/' })
         })
     }
   }
