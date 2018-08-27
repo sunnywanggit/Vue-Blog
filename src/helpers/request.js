@@ -21,9 +21,9 @@ export default function request(url,type = 'GET',data = {}){
         }else {
             option.data = data
         }
-        axios(option).then(res=>{
+        axios(option).then(res => {
             console.log(res.data)
-            if(res.data.status = 'ok'){
+            if(res.data.status === 'ok'){
                 resolve(res.data)
             }else{
                 Message.error(res.data.msg)
@@ -31,7 +31,7 @@ export default function request(url,type = 'GET',data = {}){
             }
         }).catch(err=>{
             Message.error('网络异常')
-            reject({msg:'网络异常'})
+            reject({ msg:'网络异常' })
         })
     })
 }

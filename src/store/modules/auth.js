@@ -11,12 +11,12 @@ const getters = {
 }
 
 const mutations = {
-  setUser(state, played) {
-    state.user = played.user
+  setUser(state, payload) {
+    state.user = payload.user
   },
 
-  setLogin(state, played) {
-    state.isLogin = played.isLogin
+  setLogin(state, payload) {
+    state.isLogin = payload.isLogin
   }
 }
 
@@ -36,7 +36,7 @@ const actions = {
     return res.data
   },
   
-  async logout({ commit, state }) {
+  async logout({ commit }) {
     await auth.logout()
     commit('setUser', { user: null })
     commit('setLogin', { isLogin: false })
@@ -52,9 +52,9 @@ const actions = {
   }
 }
 
-export default ({
+export default {
   state,
   getters,
   mutations,
   actions
-})
+}

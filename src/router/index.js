@@ -6,7 +6,7 @@ import User from '@/pages/User/template.vue'
 import Detail from '@/pages/Detail/template.vue'
 import My from '@/pages/My/template.vue'
 import Login from '@/pages/Login/template.vue'
-import Regiser from '@/pages/Regiser/template.vue'
+import Register from '@/pages/Register/template.vue'
 import Edit from '@/pages/Edit/template.vue'
 
 Vue.use(Router)
@@ -38,8 +38,8 @@ export default new Router({
       component: Login
     },
     {
-      path: '/regiser',
-      component: Regiser
+      path: '/register',
+      component: Register
     },
     {
       path: '/user',
