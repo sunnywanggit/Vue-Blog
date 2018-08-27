@@ -48,3 +48,4 @@ Add the desired page to the pages**
 # Vuex
 **store-auth**
 
+**login and register**
