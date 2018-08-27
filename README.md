@@ -48,4 +48,9 @@ Add the desired page to the pages**
 # Vuex
 **store-auth**
 
-**login and register**
+**Login and register**
+
+# Optimize router
+**Control page permissions**
+
+**Asynchronous loading**
