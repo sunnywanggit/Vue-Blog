@@ -70,7 +70,7 @@ const router =  new Router({
       component: () => import('@/pages/Login/template.vue')
     },
     {
-      path: '/user/:blogId',
+      path: '/user/:userId',
       component: () => import('@/pages/User/template.vue')
     },
     {
@@ -88,7 +88,7 @@ const router =  new Router({
       meta: { requiresAuth: true }
     },
     {
-      path: '/my/',
+      path: '/my',
       component: () => import('@/pages/My/template.vue'),
       meta: { requiresAuth: true }
     }
@@ -98,7 +98,7 @@ const router =  new Router({
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     store.dispatch('checkLogin').then(isLogin => {
-      if (isLogin) {
+      if (!isLogin) {
         next({
           path: '/login',
           query: { redirect: to.fullPath }
