@@ -45,7 +45,7 @@ export default {
       atIndex
     })
   },
-  getDeail({
+  getDetail({
     blogId
   }) {
     return request(URL.GET_DETAIL.replace(':blogId', blogId))
