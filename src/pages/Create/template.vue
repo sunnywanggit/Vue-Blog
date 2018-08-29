@@ -2,15 +2,15 @@
   <div id="create">
     <h1>创建文章</h1>
     <h3>文章标题</h3>
-    <el-input v-model="title"></el-input>
-    <p class="msg">限20个字</p>
+    <el-input v-model="title" @input="titleInput" placeholder="输入您的标题" maxlength="20"></el-input>
+    <p class="msg"><span>限{{titleMax}}/20个字</span></p>
     <h3>内容简介</h3>
     <!-- 自适应高度组件：添加 autosize 属性 -->
-    <el-input type="textarea" v-model="description" :autosize="{ minRows: 2, maxRows: 4}"></el-input>
-    <p class="msg">限30个字</p>
+    <el-input type="textarea" @input="descriptInput" v-model="description" :autosize="{ minRows: 2, maxRows: 4}" placeholder="展示博客简介" maxlength="100"></el-input>
+    <p class="msg"><span>限{{descriptMax}}/100个字</span></p>
     <h3>文章内容</h3>
-    <el-input type="textarea" v-model="content" :autosize="{ minRows: 6, maxRows: 30}"></el-input>
-    <p class="msg"></p>
+    <el-input type="textarea" @input="contentInput" v-model="content" :autosize="{ minRows: 6, maxRows: 30}" placeholder="请输入内容"></el-input>
+    <p class="msg"><span>已输入{{contentLength}}个字</span></p>
     <!-- 添加 atIndex 开关 -->
     <p>
       <label>是否展示到首页</label>
@@ -23,3 +23,4 @@
 <script src="./template.js"></script>
 
 <style src="./template.less" lang="less"></style>
+
