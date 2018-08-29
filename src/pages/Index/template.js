@@ -1,21 +1,35 @@
+import blog from "@/api/blog.js"
+
 export default {
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      blogs: [],
+      total: 0,
+      page: 1
     }
   },
+  // 在创建博客的时候直接读取博客 data等信息
+  created() {
+    // 判断当前页面页码 注意是 $route
+    this.page = parseInt(this.$route.query.page) || 1
+    blog.getIndexBlogs({ page: this.page }).then(res => {
+      this.blogs = res.data
+      this.total = res.total
+      this.page = res.page
+    })
+  },
+
   methods: {
-    onClick1() {
-      this.$message.error('错了哦，这是一条错误消息');
-    },
-    onClick2() {
-      this.$alert('这是一段内容', '标题名称', {
-        confirmButtonText: '确定',
-        callback: action => {
-          this.$message.success('恭喜你，这是一条成功消息');
-          
-        }
+    onPageChange(newPage) {
+      blog.getIndexBlogs({
+        page: newPage
+      }).then(res => {
+        this.blogs = res.data
+        this.total = res.total
+        this.page = res.page
+        // 将当前分页链接引入路由，使得刷新页面不发生改变
+        this.$router.push({ path: '/',query: {page: newPage }})
       })
     }
-  } 
+  }
 }

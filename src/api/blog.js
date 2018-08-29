@@ -48,7 +48,7 @@ export default {
   getDeail({
     blogId
   }) {
-    return request(URL.GET_DETAIL.replace(':blogTd', blogId))
+    return request(URL.GET_DETAIL.replace(':blogId', blogId))
   },
   updataBlog({
     blogId
@@ -58,7 +58,7 @@ export default {
     description,
     atIndex
   }) {
-    return request(URL.UPDATA.replace(':blogTd', blogId), 'PATCH', {
+    return request(URL.UPDATA.replace(':blogId', blogId), 'PATCH', {
       title,
       content,
       description,
@@ -86,6 +86,6 @@ export default {
   deleteBlog({
     blogId
   }) {
-    return request(URL.DELETE.replace(':blogTd', blogId), 'DELETE')
+    return request(URL.DELETE.replace(':blogId', blogId), 'DELETE')
   }
 }
