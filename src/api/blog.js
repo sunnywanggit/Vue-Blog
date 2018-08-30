@@ -50,7 +50,7 @@ export default {
   }) {
     return request(URL.GET_DETAIL.replace(':blogId', blogId))
   },
-  updataBlog({
+  updateBlog({
     blogId
   }, {
     title,
@@ -58,7 +58,7 @@ export default {
     description,
     atIndex
   }) {
-    return request(URL.UPDATA.replace(':blogId', blogId), 'PATCH', {
+    return request(URL.UPDATE.replace(':blogId', blogId), 'PATCH', {
       title,
       content,
       description,
