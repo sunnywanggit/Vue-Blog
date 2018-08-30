@@ -15,6 +15,7 @@
       <el-pagination
         @current-change="onPageChange"
         layout="prev, pager, next"
+        :current-page="page"
         :total="total">
       </el-pagination>
     </section>
