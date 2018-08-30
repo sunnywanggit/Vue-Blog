@@ -2,7 +2,7 @@
   <div id="index">
     <section class="blog-posts">
       <!-- 列表渲染，指定博客对应路径 -->
-      <router-link class="item" v-for="(blog,index) in blogs" :key="index" :to="`/detail/${blog.id}`">
+      <router-link class="item" v-for="blog in blogs" :key="blog.id" :to="`/detail/${blog.id}`">
         <figure class="avatar">
           <img :src="blog.user.avatar" :alt="blog.user.username">
           <figcaption>{{blog.user.username}}</figcaption>

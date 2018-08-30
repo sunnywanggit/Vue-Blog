@@ -1,6 +1,6 @@
-function friendlyDate(datsStr) {
+function friendlyDate(dataStr) {
   // 判断是否需要 friendlyDate
-  let dateObj = typeof datsStr === 'object' ? datsStr : new Date(datsStr)
+  let dateObj = typeof dataStr === 'object' ? dataStr : new Date(dataStr)
   let time = dateObj.getTime()
   let now = Date.now()
   let space = now - time
