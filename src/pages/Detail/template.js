@@ -8,7 +8,7 @@ export default {
       title: '',
       rawContent: '',
       user: {},
-      createAt: ''
+      createdAt: ''
     }
   },
 
@@ -19,7 +19,7 @@ export default {
       this.title = res.data.title
       this.rawContent = res.data.content
       this.user = res.data.user
-      this.creatAt = res.data.creatAt
+      this.createdAt = res.data.createdAt
     })
   },
   // computed 计算属性
