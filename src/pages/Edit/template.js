@@ -8,9 +8,9 @@ export default {
       description: '',
       content: '',
       atIndex: false,
-      titleMax: 20,
-      descriptMax: 100,
-      contentLength: 0
+      titleMax: '',
+      descriptMax: '',
+      contentLength: ''
     }
   },
 
@@ -21,6 +21,9 @@ export default {
       this.content = res.data.content
       this.description = res.data.description
       this.atIndex = res.data.atIndex
+      this.titleMax = 20-res.data.title.length
+      this.descriptMax = 100-res.data.description.length
+      this.contentLength = res.data.content.length
     })
   },
 

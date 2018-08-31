@@ -1,5 +1,5 @@
 <template>
-  <div id="create">
+  <div id="edit">
     <h1>编辑文章</h1>
     <h3>文章标题</h3>
     <el-input v-model="title" @input="titleInput" placeholder="输入您的标题" maxlength="20"></el-input>
@@ -21,5 +21,4 @@
 </template>
 
 <script src="./template.js"></script>
-
 <style src="./template.less" lang="less"></style>

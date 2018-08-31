@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Message } from 'element-ui'
 
 // base路径为 后端接口线上地址根路径
-axios.defaults.baseURL = 'http://blog-server.hunger-valley.com'; 
+axios.defaults.baseURL = 'https://blog-server.hunger-valley.com'; 
 // 默认 POST 请求
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 // 允许跨域

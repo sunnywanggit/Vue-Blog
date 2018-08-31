@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>© zhouyuanda.top 2018 ada</p>
+    <p>© zhouyuanda.top 2018 wechat:ddlyf873606339</p>
   </footer>
 </template>
 
