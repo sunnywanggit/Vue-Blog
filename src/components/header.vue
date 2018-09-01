@@ -1,7 +1,7 @@
 <template>
   <header :class="{login: isLogin, 'no-login': !isLogin}">
     <template v-if="!isLogin">
-      <h1>Let's share</h1>
+      <h1><router-link to="/" :title="'返回首页'">Let's share</router-link></h1>
       <p>精品博客汇聚</p>
       <div class="btns">
         <router-link to="/login"><el-button >立即登录</el-button></router-link>
@@ -9,7 +9,7 @@
       </div>
     </template>
     <template v-if="isLogin">
-      <h1 :title="'回到首页'"><router-link to="/">Let's share</router-link></h1>
+      <h1><router-link to="/" :title="'回到首页'">Let's share</router-link></h1>
       <router-link to="/create"><i class="edit el-icon-edit" :title="'新建博客'"></i></router-link>
       <div class="user">
         <img class="avatar" :src="user.avatar" :alt="user.username" :title="user.username">
@@ -43,13 +43,10 @@ export default {
   },
 
   methods: {
-    ...mapActions([
-      "checkLogin", 
-      'logout'
-      ]),
+    ...mapActions(["checkLogin", "logout"]),
 
     onLogout() {
-      this.logout()
+      this.logout();
     }
   }
 };
@@ -65,10 +62,13 @@ header.no-login {
   justify-items: center;
 
   h1 {
-    color: #fff;
     font-size: 40px;
     margin: 60px 0 0 0;
     text-transform: uppercase;
+
+    a {
+      color: #fff;
+    }
   }
 
   p {
@@ -78,6 +78,7 @@ header.no-login {
 
   .btns {
     margin-top: 20px;
+    min-width: 400px;
   }
 
   button {
@@ -114,7 +115,7 @@ header.login {
     border-radius: 50%;
     margin-left: 15px;
   }
-  
+
   .user {
     position: relative;
 
@@ -124,7 +125,7 @@ header.login {
       right: 0;
       list-style: none;
       border: 1px solid #eaeaea;
-      margin:0;
+      margin: 0;
       padding: 0;
       background-color: #fff;
 
@@ -139,7 +140,6 @@ header.login {
           background-color: #eaeaea;
         }
       }
-
     }
 
     &:hover ul {
