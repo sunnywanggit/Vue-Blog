@@ -54,3 +54,20 @@ Add the desired page to the pages**
 **Control page permissions**
 
 **Asynchronous loading**
+
+# Improve all pages
+**helpers-util**
+
+**Create/Detail/Edit/Index/Login/My/Register/User**
+
+# Publish
+```
+npm run build
+cd dist
+git init
+ga.
+git commit -v
+// github create a new repository
+// git remote add origin
+// git push -u origin master
+```
