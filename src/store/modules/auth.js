@@ -81,7 +81,7 @@ const actions = {
     commit('setLogin', {
       isLogin: res.isLogin
     })
-    if (!res.isLogin) return false
+    if (!state.isLogin) return false
     commit('setUser', {
       user: res.data
     })

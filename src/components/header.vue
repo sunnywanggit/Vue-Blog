@@ -112,7 +112,6 @@ header.login {
     width: 40px;
     height: 40px;
     border: 1px solid #fff;
-    border-radius: 50%;
     margin-left: 15px;
   }
 
