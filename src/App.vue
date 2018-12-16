@@ -52,7 +52,6 @@
   @media (max-width: 768px) {
     #app {
       grid-template-columns: 10px auto 10px;
-      #main,
       #header,
       #footer {
         padding-left: 10px;

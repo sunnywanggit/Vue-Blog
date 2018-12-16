@@ -87,8 +87,9 @@
     }
 
     .btns {
-      margin-top: 20px;
-      min-width: 401px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
     }
 
     button {
@@ -159,8 +160,14 @@
 
   @media (max-width: 768px) {
     header.no-login {
+      h1{
+        margin: 40px 0 0 0;
+      }
       .btns {
         max-width: 300px;
+      }
+      button {
+        margin: 20px 30px 0;
       }
     }
   }
