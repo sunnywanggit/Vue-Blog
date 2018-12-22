@@ -51,11 +51,14 @@
 
   @media (max-width: 768px) {
     #app {
-      grid-template-columns: 10px auto 10px;
+      grid-template-columns: 10px auto 0;
+      #main{
+        padding: 0;
+      }
       #header,
       #footer {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }
