@@ -85,6 +85,7 @@ const router =  new Router({
     {
       path: '/create',
       component: () => import('@/pages/Create/template.vue'),
+      // 配置 meta 字段
       meta: { requiresAuth: true }
     },
     {
@@ -94,6 +95,8 @@ const router =  new Router({
     }
   ]
 })
+
+// 访问这个 meta 字段
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
