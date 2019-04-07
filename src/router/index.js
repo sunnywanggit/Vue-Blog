@@ -85,7 +85,7 @@ const router =  new Router({
     {
       path: '/create',
       component: () => import('@/pages/Create/template.vue'),
-      // 配置 meta 字段
+      // 配置 meta 字段：路由元信息
       meta: { requiresAuth: true }
     },
     {
